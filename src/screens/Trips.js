@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import colors from "../theme/colors";
+import spacing from "../theme/spacing";
 
 export default function Trips({ navigation }) {
   return (
@@ -18,6 +19,7 @@ export default function Trips({ navigation }) {
 
       {/* Upcoming */}
       <Text style={styles.section}>Upcoming</Text>
+
       <View style={styles.tripCard}>
         <Text style={styles.tripTitle}>Paris Escape 🇫🇷</Text>
         <Text style={styles.tripMeta}>5 Apr – 10 Apr</Text>
@@ -27,16 +29,45 @@ export default function Trips({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.bg, padding: 16 },
-  title: { color: colors.text, fontSize: 26, fontWeight: "700", marginBottom: 16 },
-  section: { color: colors.text, fontSize: 18, marginVertical: 12 },
+  container: {
+    flex: 1,
+    backgroundColor: colors.bg,
+    padding: spacing.md,          // ✅ spacing system
+  },
+
+  title: {
+    color: colors.text,
+    fontSize: 26,
+    fontWeight: "700",
+    marginBottom: spacing.md,     // ✅
+  },
+
+  section: {
+    color: colors.text,
+    fontSize: 18,
+    marginVertical: spacing.sm,   // ✅
+  },
+
   tripCard: {
     backgroundColor: colors.card,
-    padding: 16,
-    borderRadius: 18,
-    marginBottom: 12,
+    padding: spacing.md,          // ✅
+    borderRadius: spacing.lg,     // ✅
+    marginBottom: spacing.sm,     // ✅
   },
-  tripTitle: { color: colors.text, fontSize: 18, fontWeight: "600" },
-  tripMeta: { color: colors.muted, marginTop: 6 },
-  tripStatus: { color: colors.primary, marginTop: 8 },
+
+  tripTitle: {
+    color: colors.text,
+    fontSize: 18,
+    fontWeight: "600",
+  },
+
+  tripMeta: {
+    color: colors.muted,
+    marginTop: spacing.xs,        // ✅
+  },
+
+  tripStatus: {
+    color: colors.primary,
+    marginTop: spacing.sm,       
+  },
 });

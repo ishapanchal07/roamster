@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import colors from "../theme/colors";
+import spacing from "../theme/spacing";
 
 export default function Explore() {
   return (
@@ -34,37 +35,43 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.bg,
-    padding: 16,
+    padding: spacing.md,              // ✅
   },
+
   title: {
     color: colors.text,
     fontSize: 28,
     fontWeight: "700",
   },
+
   sub: {
     color: colors.muted,
-    marginBottom: 20,
-    marginTop: 6,
+    marginTop: spacing.xs,            // ✅
+    marginBottom: spacing.lg,         // ✅
   },
+
   section: {
     color: colors.text,
     fontSize: 18,
     fontWeight: "600",
-    marginVertical: 12,
+    marginVertical: spacing.sm,       // ✅
   },
+
   card: {
     backgroundColor: colors.card,
-    padding: 16,
-    borderRadius: 16,
-    marginBottom: 12,
+    padding: spacing.md,              // ✅
+    borderRadius: spacing.lg,         // ✅
+    marginBottom: spacing.sm,         // ✅
   },
+
   cardTitle: {
     color: colors.text,
     fontSize: 16,
     fontWeight: "600",
   },
+
   meta: {
     color: colors.muted,
-    marginTop: 6,
+    marginTop: spacing.xs,            // ✅
   },
 });
