@@ -1,7 +1,7 @@
 export default {
-  bg: "#0B1220",
-  card: "#121A2F",
-  primary: "#3B82F6",
+  bg: "#0B0B0F",
+  card: "#16161D",
   text: "#FFFFFF",
   muted: "#9CA3AF",
+  primary: "#7C3AED",
 };
